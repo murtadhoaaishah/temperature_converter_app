@@ -1,4 +1,6 @@
 import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -26,17 +28,27 @@ function App() {
     setCelsius(celciusValue);
     setFahrenheit(celsiusToFahrenheit(celciusValue));
   };
+
+  const clear = () => {
+    setCelsius("");
+    setFahrenheit("");
+  };
   return (
     <div className="App">
       <h1>Temperature converter</h1>
-      <span>
-        <sup>o</sup>F
-      </span>
-      <input type="number" value={fahrenheit} onChange={handleFahrenheit} />
-      <span>
-        <sup>o</sup>C
-      </span>
-      <input type="number" value={celsius} onChange={handleCelsius} />
+      <section>
+        <span>
+          <sup>o</sup>F (fahrenheit)
+        </span>
+        <input type="number" value={fahrenheit} onChange={handleFahrenheit} />
+      </section>
+      <section>
+        <span>
+          <sup>o</sup>C (Celcius)
+        </span>
+        <input type="number" value={celsius} onChange={handleCelsius} />
+      </section>
+      <button onClick={clear}>Reset</button>
     </div>
   );
 }

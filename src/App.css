@@ -1,1 +1,22 @@
-
+.App {
+  margin: 15rem auto;
+  background-color: #ecf0f1;
+  padding: 2rem;
+  height: 15rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+span {
+  margin-right: 1rem;
+}
+button {
+  width: 10rem;
+  background-color: #3498db;
+  color: whitesmoke;
+  border: 1px solid #3498db;
+}
